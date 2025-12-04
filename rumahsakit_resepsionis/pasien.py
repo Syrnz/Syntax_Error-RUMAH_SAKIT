@@ -1,15 +1,9 @@
+from database import pasien
+from database import kamar
 from validasi_input import cek_input_no_error_all
 from validasi_input import cek_input_no_error_kosong
 
 id_pasien = 2
-pasien = {
-    1: {
-        "nama_pasien": "Reno Irvansyah",
-        "umur_pasien": 20,
-        "kategori_pasien": "REMAJA",
-        "alamat_pasien": "Mojokerto"
-    }
-}
 
 def tambah_data_pasien():
 
@@ -71,6 +65,7 @@ def tambah_data_pasien():
         else:
             print("---Kembali ke menu---")
             break
+
 def lihat_semua_data_pasien():
     if not pasien:
         print("============ DATA PASIEN KOSONG! ============\n")
@@ -375,6 +370,17 @@ def hapus_data_pasien():
         cari_data_id = int(input("Masukkkan ID pasien yang ingin dihapus : "))
     except:
         print("INPUT HARUS ANGKA, ULANGI LAGI!")
+
+
+    for nomor, info in kamar.items():
+        if info["status"] and info["pasien_id"] == id_pasien:
+            return True
+        
+    for nomor, info in kamar.items():
+        if cari_data_id == info['pasien_id']:
+            print("TIDAK DI IZINKAN UNTUK MENGHAPUS DATA PASIEN!")
+            print("Pasien ini sedang di rawat di ruang inap!")
+            return
 
     ketemu = False
     for id_data_pasien, data_pasien in pasien.items():

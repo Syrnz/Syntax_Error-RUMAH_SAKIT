@@ -1,103 +1,12 @@
+from database import kamar
+from database import pasien
 from dokter import dokter
 from dokter import lihat_semua_data_dokter
-from pasien import pasien
 from pasien import lihat_semua_data_pasien
 from validasi_input import cek_input_no_error_all
 from validasi_input import cek_input_no_error_kosong
 from validasi_input import cek_input_tanggal
 
-kamar = {
-    101: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    102: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    103: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    104: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    105: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    201:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    202:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    203:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    204:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    205:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        }
-}
 
 def cek_pasien_sudah_menginap(id_pasien, kamar):
 
@@ -222,6 +131,7 @@ def checkinPasien():
         break
 
     while True:
+
         lihat_semua_data_pasien()
         try:
             print("\nketik '0' untuk batal input")

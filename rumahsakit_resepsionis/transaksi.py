@@ -1,10 +1,10 @@
-from pasien import pasien
-from kamar import kamar
+from database import pasien
+from database import kamar
+from database import tagihan_rawat_inap
 from kamar import lihat_semua_kamar
 from validasi_input import cek_input_no_error_all
 
 id_tagihan_kamar = 1
-tagihan_rawat_inap = []
 
 def tagihan_kamar():
 
@@ -90,9 +90,7 @@ def tagihan_kamar():
     print(f"UANG DIBAYAR            : Rp{uang_dibayar:,}")
     print(f"UANG KEMBALIAN          : Rp{uang_kembalian:,}")
     print("-------          TERIMAKASIH               -------\n")
-
     return
-
 
 def riwayat_tagihan():
 
