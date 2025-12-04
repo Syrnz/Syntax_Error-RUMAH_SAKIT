@@ -52,51 +52,6 @@ kamar = {
             "tanggal_masuk": None,
             "status_tagihan": False
         },
-    106: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    107: {
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    108:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    109:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
-    110:{
-            "status": False,
-            "pasien_id": None,
-            "dokter": None,
-            "deskripsi_pasien": None,
-            "harga_kamar": 350000,
-            "tanggal_masuk": None,
-            "status_tagihan": False
-        },
     201:{
             "status": False,
             "pasien_id": None,
@@ -151,7 +106,6 @@ def cek_pasien_sudah_menginap(id_pasien, kamar):
             return True
         
     return False
-
 
 def cek_cari_pasien_inap(cari_pasien):
         

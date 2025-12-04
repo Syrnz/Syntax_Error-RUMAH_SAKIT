@@ -43,7 +43,7 @@ def tagihan_kamar():
 
     while True:
         try:
-            jumlah_hari = int(input("Berapa hari rawat inap? : "))
+            jumlah_hari = int(input("Berapa hari pasien telah di rawat inap? : "))
         except:
             print("Input harus angka!")
             continue
@@ -76,8 +76,9 @@ def tagihan_kamar():
 
     tambah_tagihan = [id_tagihan_kamar, nama_pembayar, no_kamar, pasien_kamar["nama_pasien"], data_kamar["tanggal_masuk"], harga_kamar, jumlah_hari, total_tagihan, uang_dibayar, uang_kembalian]
     tagihan_rawat_inap.append(tambah_tagihan)
-
     id_tagihan_kamar += 1
+
+    print("Pembayaran kamar inap berhasil!")
 
         
     print("\n------  PEMBAYARAN KAMAR INAP PASIEN     ------")
